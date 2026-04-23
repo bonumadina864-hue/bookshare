@@ -150,8 +150,231 @@
         </div>
       </div>
     </section>
+
+    <section class="bg-white py-16 px-6">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-[#1a4a9e] text-4xl font-bold text-center mb-12">Frequently asked questions</h2>
+
+        <div
+          v-for="faq in faqs"
+          :key="faq.id"
+          class="mb-6"
+        >
+          <button
+            type="button"
+            class="w-full bg-[#1a4a9e] text-white px-6 py-5 text-left border-2 border-[#1a4a9e] flex items-center justify-between transition-colors"
+            :class="isOpen(faq.id) ? 'rounded-t-lg rounded-b-none' : 'rounded-lg'"
+            @click="toggleFaq(faq.id)"
+          >
+            <span class="font-bold text-[26px] leading-tight">{{ faq.question }}</span>
+            <span class="w-7 h-7 rounded-full bg-white text-[#1a4a9e] flex items-center justify-center text-lg font-bold shrink-0 ml-4">
+              {{ isOpen(faq.id) ? '-' : '+' }}
+            </span>
+          </button>
+
+          <transition name="faq-slide">
+            <div
+              v-if="isOpen(faq.id)"
+              class="border-2 border-[#1a4a9e] border-t-0 rounded-b-lg bg-white px-6 py-6"
+            >
+              <p class="text-black text-[16px] leading-8">
+                <template v-for="(part, index) in faq.parts" :key="`${faq.id}-${index}`">
+                  <a
+                    v-if="part.type === 'link'"
+                    :href="part.href"
+                    class="text-blue-600 underline"
+                  >
+                    {{ part.text }}
+                  </a>
+                  <span v-else>{{ part.text }}</span>
+                </template>
+              </p>
+            </div>
+          </transition>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-gradient-to-br from-[#802080] via-[#501060] to-[#201040] py-20 px-6">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-white text-4xl font-bold text-center mb-10">
+          Explore books for K-12 students
+        </h2>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+          <article v-for="book in k12Books" :key="book.label" class="overflow-hidden">
+            <div class="aspect-[2/3] rounded-t-xl overflow-hidden bg-gray-400">
+              <img :src="book.image" :alt="book.label" class="w-full h-full object-cover" />
+            </div>
+            <p class="bg-white text-black text-sm font-semibold p-3 rounded-b-xl leading-tight min-h-[64px] flex items-center">
+              {{ book.label }}
+            </p>
+          </article>
+        </div>
+
+        <div class="text-center mt-8">
+          <a href="#" class="inline-flex items-center gap-2 bg-[#1a365d] text-white border border-white rounded-md px-7 py-3 font-bold">
+            Explore full library <span aria-hidden="true">-></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative py-20 px-6 bg-cover bg-center bg-fixed" style="background-image: url('https://www.bookshare.org/wp-content/uploads/2024/01/Sign-Up-CTA-Section-Desktop.webp');">
+      <div class="absolute inset-0 bg-black/55"></div>
+      <div class="relative max-w-3xl mx-auto bg-white rounded-[40px] px-8 py-10 text-center">
+        <h2 class="text-[#123e86] text-5xl font-extrabold leading-tight mb-6">
+          Join Bookshare and
+          <br />
+          enjoy millions of ebooks
+        </h2>
+        <button class="bg-[#0f223d] text-white font-bold px-8 py-3 rounded-lg mb-6">
+          Sign up today
+        </button>
+        <p class="text-slate-700 text-lg">
+          Still have questions?
+          <a href="#" class="text-[#1f4d8e] underline font-semibold ml-2">Visit help and learning ></a>
+        </p>
+      </div>
+    </section>
+
+    <footer class="bg-[#123f8d] text-white">
+      <div class="mx-auto w-full max-w-[1240px] px-8 py-16">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-12 gap-y-8">
+          <div class="space-y-3">
+            <h4 class="uppercase font-bold text-lg">ABOUT</h4>
+            <a href="#" class="block underline text-sm">Who we are</a>
+            <a href="#" class="block underline text-sm">Careers</a>
+            <a href="#" class="block underline text-sm">Events</a>
+            <a href="#" class="block underline text-sm">Media Kit</a>
+          </div>
+
+          <div class="space-y-3">
+            <h4 class="uppercase font-bold text-lg">GET INVOLVED</h4>
+            <a href="#" class="block underline text-sm">Donate</a>
+            <a href="#" class="block underline text-sm">Partner with us</a>
+          </div>
+
+          <div class="space-y-3">
+            <h4 class="uppercase font-bold text-lg">HELP</h4>
+            <a href="#" class="block underline text-sm">Help and learning center</a>
+            <a href="#" class="block underline text-sm">Contact us</a>
+            <a href="#" class="block underline text-sm">Site map</a>
+          </div>
+
+          <div class="space-y-3">
+            <h4 class="uppercase font-bold text-lg">LEGAL</h4>
+            <a href="#" class="block underline text-sm">Legal</a>
+            <a href="#" class="block underline text-sm">Privacy</a>
+            <a href="#" class="block underline text-sm">Accessibility</a>
+          </div>
+
+          <div class="space-y-3">
+            <h4 class="uppercase font-bold text-lg">FOLLOW US</h4>
+            <a href="#" class="block underline text-sm">Our blog</a>
+            <a href="#" class="block underline text-sm">Facebook</a>
+            <a href="#" class="block underline text-sm">Instagram</a>
+            <a href="#" class="block underline text-sm">X</a>
+            <a href="#" class="block underline text-sm">Youtube</a>
+          </div>
+
+          <div class="space-y-3">
+            <h4 class="uppercase font-bold text-lg">DOWNLOAD APP</h4>
+            <a href="#" class="block underline text-sm">Apple/iOS</a>
+            <a href="#" class="block underline text-sm">Google/Android</a>
+            <a href="#" class="block underline text-sm">Amazon Alexa</a>
+          </div>
+        </div>
+
+        <div class="my-10 border-t border-white/35"></div>
+
+        <div class="flex flex-col md:flex-row items-start gap-8 md:gap-10">
+          <img
+            src="https://www.bookshare.org/wp-content/uploads/2024/04/White_BKS_Logo_2023.png"
+            alt="Bookshare logo"
+            class="h-10 w-auto"
+          />
+          <div class="max-w-[760px] text-[11px] leading-5 text-white/90">
+            <p>
+              This project is supported by the U.S. Department of Education, Office of Special Education Programs (Award Number H327D220002).
+              Opinions expressed herein are those of the authors and do not necessarily represent the position of the U.S. Department of Education.
+            </p>
+            <p class="mt-3">
+              Bookshare and Benetech are registered trademarks of Beneficent Technology, Inc. Copyright 2026, Beneficent Technology, Inc.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
   </div>
 </template>
+
+<script setup>
+import { ref } from 'vue'
+import kitob1 from '../img/kitob1.png'
+import kitob2 from '../img/kitob2.png'
+import kitob3 from '../img/kitob3.png'
+import kitob4 from '../img/kitob4.png'
+import kitob5 from '../img/kitob5.png'
+import kitob6 from '../img/kitob6.png'
+
+const openFaqs = ref([1, 2, 3])
+
+const faqs = [
+  {
+    id: 1,
+    question: 'Who can join Bookshare?',
+    parts: [
+      { type: 'text', text: 'Bookshare is for students who find it difficult to process or comprehend printed words, see text in books or on a screen, or physically manage books or reading devices. To access our copyright library, students must have a qualifying disability. ' },
+      { type: 'link', text: 'Learn about qualifications.', href: '#' }
+    ]
+  },
+  {
+    id: 2,
+    question: 'How much does it cost?',
+    parts: [
+      { type: 'text', text: 'Bookshare is FREE for qualified U.S. students in Pre-K to 12th grade, post-secondary, graduate, vocational, and continuing education classes through an award from the Office of Special Education Programs (OSEP), US Department of Education.' }
+    ]
+  },
+  {
+    id: 3,
+    question: 'What books are available to students?',
+    parts: [
+      { type: 'text', text: 'Bookshare has books for every age and grade level of student. We have books for school, including textbooks and educational materials, new releases and popular series for children, middle school, teens, and young adult, as well as state-side curriculum, college course-level materials, and career resources. ' },
+      { type: 'link', text: 'Learn about the library.', href: '#' }
+    ]
+  },
+  {
+    id: 4,
+    question: 'How do you read Bookshare books?',
+    parts: [
+      { type: 'text', text: 'Bookshare books can be read in many ways. Students can listen with high-quality text-to-speech voices, follow highlighted text, read with refreshable braille, and customize fonts, colors, and reading speed in compatible tools. ' },
+      { type: 'link', text: 'Learn about reading tools.', href: '#' }
+    ]
+  }
+]
+
+const toggleFaq = (id) => {
+  if (openFaqs.value.includes(id)) {
+    openFaqs.value = openFaqs.value.filter((item) => item !== id)
+    return
+  }
+
+  openFaqs.value = [...openFaqs.value, id]
+}
+
+const isOpen = (id) => openFaqs.value.includes(id)
+
+const k12Books = [
+  { label: 'Newbery Award Winners', image: kitob1 },
+  { label: 'Animals', image: kitob2 },
+  { label: 'Books in Spanish', image: kitob3 },
+  { label: 'Accelerated Reader Middl...', image: kitob4 },
+  { label: "Young Reader's...", image: kitob5 },
+  { label: 'High Interest Young Adult', image: kitob6 }
+]
+</script>
 
 <style scoped>
 .hero-sunburst {
@@ -161,5 +384,25 @@
     rgba(14, 73, 168, 0.95) 0deg 10deg,
     rgba(10, 61, 145, 0.98) 10deg 20deg
   );
+}
+
+.faq-slide-enter-active,
+.faq-slide-leave-active {
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.faq-slide-enter-from,
+.faq-slide-leave-to {
+  opacity: 0;
+  transform: translateY(-8px);
+  max-height: 0;
+}
+
+.faq-slide-enter-to,
+.faq-slide-leave-from {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 420px;
 }
 </style>

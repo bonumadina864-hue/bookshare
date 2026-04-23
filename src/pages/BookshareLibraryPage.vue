@@ -99,21 +99,54 @@
         </div>
       </section>
 
-      <section class="bg-[linear-gradient(135deg,#8f2f9d_0%,#214790_70%)] py-14">
+      <section class="bg-gradient-to-br from-[#802080] via-[#501060] to-[#201040] py-20">
         <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h3 class="mb-8 text-center text-[2.3rem] font-bold text-white">Explore our collection</h3>
-          <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6 xl:gap-5">
-            <article v-for="book in books" :key="book.label" class="overflow-hidden rounded-lg bg-white shadow-md">
-              <div class="h-64 w-full overflow-hidden">
-                <img :src="book.image" :alt="book.label" class="block h-full w-full object-cover object-[center_58%]" />
-              </div>
-              <p class="min-h-[3.25rem] px-3 pb-2 pt-1 text-xl font-medium leading-tight text-slate-900">{{ book.label }}</p>
-            </article>
+          <div class="py-20">
+            <h3 class="mb-4 text-center text-4xl font-bold text-white lg:text-5xl">Explore the world's biggest accessible library</h3>
+            <p class="mx-auto mb-10 max-w-3xl text-center text-sm text-gray-300">
+              Discover trending and award-winning titles for every reader.
+            </p>
+
+            <h4 class="mb-5 text-2xl font-bold text-white">New and trending</h4>
+            <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+              <article v-for="book in trendingBooks" :key="book.label" class="overflow-hidden">
+                <div class="aspect-[2/3] w-full overflow-hidden rounded-t-xl bg-gray-400">
+                  <img :src="book.image" :alt="book.label" class="h-full w-full object-cover" />
+                </div>
+                <p class="rounded-b-xl bg-white p-3 text-center text-sm font-semibold text-black">
+                  {{ book.label }}
+                </p>
+              </article>
+            </div>
+            <div class="mt-8 text-center">
+              <a href="#" class="inline-flex items-center gap-2 rounded-md border border-white bg-[#1a365d] px-7 py-3 text-base font-bold text-white">
+                Explore library <span aria-hidden="true">-></span>
+              </a>
+            </div>
           </div>
-          <div class="mt-8 text-center">
-            <a href="#" class="inline-flex items-center gap-2 rounded-md border border-white px-7 py-3 text-lg font-bold text-white hover:bg-white hover:text-blue-900">
-              Explore full library <i class="fas fa-arrow-right" aria-hidden="true"></i>
-            </a>
+
+          <div class="py-20">
+            <h3 class="mb-4 text-center text-4xl font-bold text-white lg:text-5xl">Explore books for K-12 students</h3>
+            <p class="mx-auto mb-10 max-w-3xl text-center text-sm text-gray-300">
+              Browse curated categories for elementary, middle, and high school readers.
+            </p>
+
+            <h4 class="mb-5 text-2xl font-bold text-white">Award winning</h4>
+            <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+              <article v-for="book in k12Books" :key="book.label" class="overflow-hidden">
+                <div class="aspect-[2/3] w-full overflow-hidden rounded-t-xl bg-gray-400">
+                  <img :src="book.image" :alt="book.label" class="h-full w-full object-cover" />
+                </div>
+                <p class="rounded-b-xl bg-white p-3 text-center text-sm font-semibold leading-tight text-black">
+                  {{ book.label }}
+                </p>
+              </article>
+            </div>
+            <div class="mt-8 text-center">
+              <a href="#" class="inline-flex items-center gap-2 rounded-md border border-white bg-[#1a365d] px-7 py-3 text-base font-bold text-white">
+                Explore full library <span aria-hidden="true">-></span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -212,13 +245,22 @@ const features = [
   { title: "Over 40 languages", icon: "fas fa-globe", description: "Find books in over 40 languages, including Spanish, French, Hindi, and more" },
 ];
 
-const books = [
+const trendingBooks = [
   { label: "Popular last month", image: kitob1 },
-  { label: "New York Times fiction", image: kitob2 },
-  { label: "Popular with kids", image: kitob3 },
-  { label: "Common Core textbooks", image: kitob4 },
-  { label: "Career resources", image: kitob5 },
-  { label: "Bilingual books", image: kitob6 },
+  { label: "New on Bookshare", image: kitob2 },
+  { label: "NY Times fiction", image: kitob3 },
+  { label: "NY Times non-fiction", image: kitob4 },
+  { label: "Most read in school", image: kitob5 },
+  { label: "Staff picks", image: kitob6 },
+];
+
+const k12Books = [
+  { label: "Newbery Award Winners", image: kitob1 },
+  { label: "Animals", image: kitob2 },
+  { label: "Books in Spanish", image: kitob3 },
+  { label: "Accelerated Reader Middle School", image: kitob4 },
+  { label: "Young Reader's Series", image: kitob5 },
+  { label: "High Interest Young Adult", image: kitob6 },
 ];
 
 const footerColumns = [
