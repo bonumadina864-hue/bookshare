@@ -1,0 +1,25 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.bg-bookshare-blue {
+    background-color: #003082;
+}
+
+/* Kartochkalar uchun maxsus soya va effekt */
+.pricing-card {
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-color: #003082;
+}
+
+.divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #e2e8f0, transparent);
+    margin: 20px 0;
+}
