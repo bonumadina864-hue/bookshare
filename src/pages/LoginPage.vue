@@ -86,4 +86,209 @@ const toggleMenu = () => {
   </div>
 </template>
 
-<style src="../../book/login.css"></style>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: #2b4089;
+  padding: 15px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.logo img {
+  height: 52px;
+  width: auto;
+  display: block;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+.login-btn {
+  background: transparent;
+  border: 1px dashed white;
+  color: white;
+  padding: 5px 15px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.burger-btn {
+  display: none;
+  background: transparent;
+  border: 0;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.mobile-nav-links {
+  display: none;
+  background-color: #2b4089;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 10px 18px 16px;
+}
+
+.mobile-nav-links a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 8px 0;
+}
+
+.error-container {
+  padding: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.error-box {
+  background-color: #f9e6e6;
+  border: 1px solid #e0c3c3;
+  padding: 30px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.error-box h1 {
+  color: #4a6da7;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.red-text {
+  color: #a94442;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.suggestions {
+  margin-top: 20px;
+  line-height: 1.8;
+}
+
+.suggestions ul {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.suggestions a {
+  color: #0056b3;
+}
+
+.minimal-footer {
+  background-color: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  padding: 40px 20px 30px 20px;
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 25px;
+}
+
+.social-link {
+  font-size: 18px;
+  transition: transform 0.2s ease;
+}
+
+.social-link:hover {
+  transform: scale(1.15);
+}
+
+.facebook { color: #3b5998; }
+.twitter { color: #1da1f2; }
+.instagram { color: #e1306c; }
+.youtube { color: #ff0000; }
+
+.footer-nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-nav a {
+  color: #1a0dab;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom-row {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.footer-bottom-row p {
+  color: #555555;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 16px;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .burger-btn {
+    display: block;
+  }
+
+  .mobile-nav-links {
+    display: block;
+  }
+
+  .footer-top-row {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+  }
+
+  .footer-nav {
+    justify-content: center;
+    gap: 15px;
+  }
+}
+</style>
