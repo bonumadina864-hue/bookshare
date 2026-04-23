@@ -111,14 +111,14 @@
     </div>
 
     <div class="flex flex-col md:flex-row w-full">
-      <a href="#" class="relative flex-1 h-[450px] group overflow-hidden border-r border-white/20 last:border-0 flex flex-col justify-end">
+      <router-link to="/learn-for" class="relative flex-1 h-[450px] group overflow-hidden border-r border-white/20 last:border-0 flex flex-col justify-end">
         <img src="https://cdn.allaboutcookies.org/696x400/filters:quality(100)/images/2022/11/28/mother-daughter-iphone-parental-controls.jpeg" class="absolute inset-0 w-full h-full object-cover" />
         <div class="absolute inset-0 bg-gradient-to-t from-[#1a4789] via-[#1a4789] via-25% to-transparent opacity-100 transition-colors duration-300 group-hover:from-[#23529c] group-hover:via-[#23529c]"></div>
         <div class="relative p-6 pb-10 text-white z-10">
           <h3 class="text-[22px] font-bold mb-3 leading-tight">Parents and students</h3>
           <p class="text-[14px] leading-snug opacity-90">Help your child build reading skills and a passion for learning at home.</p>
         </div>
-      </a>
+      </router-link>
 
       <a href="#" class="relative flex-1 h-[450px] group overflow-hidden border-r border-white/20 last:border-0 flex flex-col justify-end">
         <img src="https://www.bookshare.org/wp-content/uploads/2024/02/Teacher-holding-tablet-in-computer-lab.jpg" class="absolute inset-0 w-full h-full object-cover" />
@@ -156,6 +156,264 @@
         </div>
       </a>
     </div>
+
+    <section class="reader-section">
+      <div class="reader-inner">
+        <div class="reader-left">
+          <h2>Bookshare Reader</h2>
+          <p>
+            Read easily with our free reading app for web browsers, smartphones,
+            tablets, and Alexa-enabled smart speakers.
+          </p>
+
+          <ul>
+            <li>Find and read books directly in the app</li>
+            <li>Listen to books in high quality audio</li>
+            <li>Follow along with karaoke-style highlighting</li>
+          </ul>
+
+          <a href="#" class="reader-link">Learn about Bookshare Reader <span>></span></a>
+
+          <div class="store-buttons">
+            <a href="#" class="store-badge-link">
+              <img src="https://www.bookshare.org/wp-content/uploads/2024/01/Apple-App-Store.png" alt="Download on the App Store" />
+            </a>
+            <a href="#" class="store-badge-link">
+              <img src="https://www.bookshare.org/wp-content/uploads/2024/01/google-play-badge.png" alt="Get it on Google Play" />
+            </a>
+          </div>
+        </div>
+
+        <div class="reader-right">
+          <img
+            src="https://www.bookshare.org/wp-content/uploads/2024/02/Devices-w-Bookshare-Reader.png"
+            alt="Bookshare Reader devices"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-gradient-to-b from-[#4c1d95] to-[#1e1b4b] text-white py-16 px-6 md:px-10">
+      <div class="max-w-7xl mx-auto font-sans">
+        <h2 class="text-center text-4xl md:text-5xl font-extrabold leading-tight mb-12">
+          Explore the world’s biggest<br />
+          accessible ebook library
+        </h2>
+
+        <div class="mb-10">
+          <h3 class="text-4xl font-bold mb-4">New and trending</h3>
+          <p class="text-gray-300 text-lg mb-7">Check out all of our recently added and popular titles.</p>
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <a href="#" class="rounded-lg overflow-hidden bg-white text-black">
+              <img src="https://www.bookshare.org/wp-content/uploads/2024/01/1P6VYKiu24lytaX_rQ-_fBDfu1Oqx5C5NSTE8CdyGhY-MEDIUM.jpg" class="w-full aspect-[2/3] object-cover" />
+              <div class="bg-white px-3 py-2 text-center text-[14px] leading-tight min-h-[62px] flex items-center justify-center">Popular last month</div>
+            </a>
+            <a href="#" class="rounded-lg overflow-hidden bg-white text-black">
+              <img src="https://www.bookshare.org/wp-content/uploads/2024/01/hWe88P2MOfd1rq-tK0CfoIJF0GKX4vnC6uJzcgNKV9Q-MEDIUM.jpg" class="w-full aspect-[2/3] object-cover" />
+              <div class="bg-white px-3 py-2 text-center text-[14px] leading-tight min-h-[62px] flex items-center justify-center">New on Bookshare</div>
+            </a>
+            <a href="#" class="rounded-lg overflow-hidden bg-white text-black">
+              <img src="https://www.bookshare.org/wp-content/uploads/2024/01/ft8-sOmjeroYDBN_DT6NDjT-NPYiDyJo7v67FCEdNl8-MEDIUM.jpg" class="w-full aspect-[2/3] object-cover" />
+              <div class="bg-white px-3 py-2 text-center text-[14px] leading-tight min-h-[62px] flex items-center justify-center">NY Times fiction</div>
+            </a>
+            <a href="#" class="rounded-lg overflow-hidden bg-white text-black">
+              <img src="https://www.bookshare.org/wp-content/uploads/2024/01/340yZg4_gpxOONRQeLWW07EIXjyhJXq0h2FDtb2WBqo-MEDIUM.jpg" class="w-full aspect-[2/3] object-cover" />
+              <div class="bg-white px-3 py-2 text-center text-[14px] leading-tight min-h-[62px] flex items-center justify-center">NY Times nonfiction</div>
+            </a>
+            <a href="#" class="rounded-lg overflow-hidden bg-white text-black">
+              <img src="https://www.bookshare.org/wp-content/uploads/2024/02/not-dead-enough-12.jpg" class="w-full aspect-[2/3] object-cover" />
+              <div class="bg-white px-3 py-2 text-center text-[14px] leading-tight min-h-[62px] flex items-center justify-center">Popular teen books</div>
+            </a>
+            <a href="#" class="rounded-lg overflow-hidden bg-white text-black">
+              <img src="https://www.bookshare.org/wp-content/uploads/2024/01/ug6tQEFLNeak2lrWoGAwtdxOWWGzd3glpSV5WvkDPYE-MEDIUM.jpg" class="w-full aspect-[2/3] object-cover" />
+              <div class="bg-white px-3 py-2 text-center text-[14px] leading-tight min-h-[62px] flex items-center justify-center">Popular kid’s books</div>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-4xl font-bold mb-4">Award winning</h3>
+          <p class="text-gray-300 text-lg mb-7">Explore all of the top critically acclaimed titles.</p>
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <a href="#" class="rounded-lg overflow-hidden bg-white text-black">
+              <img src="https://www.bookshare.org/wp-content/uploads/2024/01/p-C-Jf1y7QwTOAuu2hYEfWn7lqMpiFytwcG72f436ys-MEDIUM.jpg" class="w-full aspect-[2/3] object-cover" />
+              <div class="bg-white px-3 py-2 text-center text-[14px] leading-tight min-h-[62px] flex items-center justify-center">Newbery Award winners</div>
+            </a>
+            <a href="#" class="rounded-lg overflow-hidden bg-white text-black">
+              <img src="https://www.bookshare.org/wp-content/uploads/2024/01/UB1DBlxcqMdXVeCGMdSw6mBrD2gOwk-KdCx6dDqu8NU-MEDIUM.jpg" class="w-full aspect-[2/3] object-cover" />
+              <div class="bg-white px-3 py-2 text-center text-[14px] leading-tight min-h-[62px] flex items-center justify-center">Schneider Family Book Award</div>
+            </a>
+            <a href="#" class="rounded-lg overflow-hidden bg-white text-black">
+              <img src="https://www.bookshare.org/wp-content/uploads/2024/05/liliana-9780593244111.jpeg" class="w-full aspect-[2/3] object-cover" />
+              <div class="bg-white px-3 py-2 text-center text-[14px] leading-tight min-h-[62px] flex items-center justify-center">Pulitzer Prize Award Winners</div>
+            </a>
+            <a href="#" class="rounded-lg overflow-hidden bg-white text-black">
+              <img src="https://www.bookshare.org/wp-content/uploads/2024/01/MY5HdIkd8suZP7_MqzZvmmNyl36YUcttekgGH9qxs7o-MEDIUM.jpg" class="w-full aspect-[2/3] object-cover" />
+              <div class="bg-white px-3 py-2 text-center text-[14px] leading-tight min-h-[62px] flex items-center justify-center">Coretta Scott King Book Awards</div>
+            </a>
+            <a href="#" class="rounded-lg overflow-hidden bg-white text-black">
+              <img src="https://www.bookshare.org/wp-content/uploads/2024/02/inheritors.jpeg" class="w-full aspect-[2/3] object-cover" />
+              <div class="bg-white px-3 py-2 text-center text-[14px] leading-tight min-h-[62px] flex items-center justify-center">PEN Open Book Award</div>
+            </a>
+            <a href="#" class="rounded-lg overflow-hidden bg-white text-black">
+              <img src="https://www.bookshare.org/wp-content/uploads/2024/01/4OqugRbur4kCYMyadaLiIrZGaYYrJApR92HK6LuzlbU-MEDIUM.jpg" class="w-full aspect-[2/3] object-cover" />
+              <div class="bg-white px-3 py-2 text-center text-[14px] leading-tight min-h-[62px] flex items-center justify-center">Goodreads Choice Award</div>
+            </a>
+          </div>
+        </div>
+
+        <div class="text-center mt-8">
+          <a href="#" class="inline-flex items-center gap-2 bg-[#0b3c90] hover:bg-[#1247a1] text-white font-semibold px-7 py-3 rounded-lg border border-[#8ec5ff] transition">
+            Explore library <span>→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-20 px-6">
+      <div class="max-w-6xl mx-auto flex flex-col items-center text-center">
+        <h2 class="text-[#1a365d] font-bold text-5xl mb-10">Our partners</h2>
+
+        <p class="text-gray-700 text-lg max-w-4xl mb-12">
+          Bookshare® is only possible with the huge support from the US Department of Education and other partners.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-12 mb-12">
+          <img
+            src="https://www.bookshare.org/wp-content/uploads/2024/01/IdeasthatWork_png-1.webp"
+            alt="IDEAS that Work"
+            class="h-16 w-auto object-contain"
+          />
+          <img
+            src="https://www.bookshare.org/wp-content/uploads/2024/01/Macmillan-Logo-scaled-1.webp"
+            alt="macmillan learning"
+            class="h-14 w-auto object-contain"
+          />
+          <img
+            src="https://www.bookshare.org/wp-content/uploads/2024/01/cela-logo-1.webp"
+            alt="CELA"
+            class="h-16 w-auto object-contain"
+          />
+          <img
+            src="https://www.bookshare.org/wp-content/uploads/2024/01/RNIB-logo-1.webp"
+            alt="RNIB"
+            class="h-16 w-auto object-contain"
+          />
+        </div>
+
+        <p class="text-gray-700 text-2xl leading-relaxed">
+          Interested in getting involved?<br />
+          Consider
+          <a href="#" class="text-blue-600 underline">donating</a>
+          or
+          <a href="#" class="text-blue-600 underline">partnering with us</a>.
+        </p>
+      </div>
+    </section>
+
+    <section
+      class="relative py-14 px-4 md:px-6 bg-cover bg-center bg-fixed"
+      style="background-image: url('https://www.bookshare.org/wp-content/uploads/2024/01/Sign-Up-CTA-Section-Desktop.webp')"
+    >
+      <div class="absolute inset-0 bg-black/45"></div>
+
+      <div class="relative max-w-6xl mx-auto bg-white rounded-[30px] py-12 px-8 md:py-16 md:px-10 flex flex-col items-center text-center space-y-8">
+        <h2 class="text-[#003366] font-extrabold text-4xl md:text-6xl leading-tight">
+          Join Bookshare and enjoy millions of ebooks
+        </h2>
+
+        <button
+          class="bg-[#1a202c] text-white font-bold rounded-lg px-8 py-3 hover:bg-black transition"
+        >
+          Sign up today
+        </button>
+
+        <p class="text-gray-700 text-xl">
+          Still have questions?
+          <a href="#" class="text-[#003366] underline font-semibold ml-2">Visit help and learning <span>></span></a>
+        </p>
+      </div>
+    </section>
+
+    <footer class="bg-[#0a327d] text-white py-16 px-8 font-sans">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10">
+          <div>
+            <h4 class="uppercase font-bold text-lg mb-4">About</h4>
+            <ul class="space-y-3 text-sm">
+              <li><a href="#" class="underline">Who we are</a></li>
+              <li><a href="#" class="underline">Careers</a></li>
+              <li><a href="#" class="underline">Events</a></li>
+              <li><a href="#" class="underline">Media Kit</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="uppercase font-bold text-lg mb-4">Get Involved</h4>
+            <ul class="space-y-3 text-sm">
+              <li><a href="#" class="underline">Donate</a></li>
+              <li><a href="#" class="underline">Partner with us</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="uppercase font-bold text-lg mb-4">Help</h4>
+            <ul class="space-y-3 text-sm">
+              <li><a href="#" class="underline">Help and learning center</a></li>
+              <li><a href="#" class="underline">Contact us</a></li>
+              <li><a href="#" class="underline">Site map</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="uppercase font-bold text-lg mb-4">Legal</h4>
+            <ul class="space-y-3 text-sm">
+              <li><a href="#" class="underline">Legal</a></li>
+              <li><a href="#" class="underline">Privacy</a></li>
+              <li><a href="#" class="underline">Accessibility</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="uppercase font-bold text-lg mb-4">Follow Us</h4>
+            <ul class="space-y-3 text-sm">
+              <li><a href="#" class="underline">Our blog</a></li>
+              <li><a href="#" class="underline">Facebook</a></li>
+              <li><a href="#" class="underline">Instagram</a></li>
+              <li><a href="#" class="underline">X</a></li>
+              <li><a href="#" class="underline">Youtube</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="uppercase font-bold text-lg mb-4">Download App</h4>
+            <ul class="space-y-3 text-sm">
+              <li><a href="#" class="underline">Apple/iOS</a></li>
+              <li><a href="#" class="underline">Google/Android</a></li>
+              <li><a href="#" class="underline">Amazon Alexa</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-white/30 mt-14 pt-8">
+          <div class="flex flex-col md:flex-row md:items-center gap-6 md:gap-8">
+            <div class="shrink-0">
+              <img
+                src="https://www.bookshare.org/wp-content/uploads/2024/04/White_BKS_Logo_2023.png"
+                alt="Bookshare logo"
+                class="h-10 w-auto"
+              />
+            </div>
+            <div class="text-[11px] leading-relaxed text-white/95 max-w-4xl">
+              <p>
+                This project is supported by the U.S. Department of Education, Office of Special Education Programs (Award
+                Number H327D220002). Opinions expressed herein are those of the authors and do not necessarily represent the
+                position of the U.S. Department of Education.
+              </p>
+              <p class="mt-3">
+                Bookshare® and Benetech® are registered trademarks of Beneficent Technology, Inc. © Copyright 2026,
+                Beneficent Technology, Inc.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -194,5 +452,92 @@ body {
 }
 .bg-dark-navy {
   background-color: #001529;
+}
+
+.reader-section {
+  background: #efefef;
+  padding: 58px 0 64px;
+}
+
+.reader-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 0.95fr 1fr;
+  gap: 22px;
+  align-items: center;
+}
+
+.reader-left h2 {
+  color: #143d8d;
+  font-size: 48px;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+.reader-left p {
+  color: #222;
+  font-size: 14px;
+  line-height: 1.45;
+  max-width: 430px;
+}
+
+.reader-left ul {
+  margin: 26px 0 22px 14px;
+  color: #222;
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 460px;
+}
+
+.reader-link {
+  display: inline-block;
+  color: #143d8d;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: underline;
+  margin: 4px 0 28px;
+}
+
+.store-buttons {
+  display: flex;
+  gap: 26px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.store-badge-link img {
+  display: block;
+  height: 50px;
+  width: auto;
+}
+
+.reader-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reader-right img {
+  width: min(100%, 470px);
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 1200px) {
+  .reader-inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .reader-right {
+    justify-content: flex-start;
+  }
+
+  .reader-left h2 {
+    font-size: 44px;
+  }
 }
 </style>
