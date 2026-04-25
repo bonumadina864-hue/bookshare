@@ -1,9 +1,7 @@
 <template>
   <div class="bg-[#f9fafb]">
     <header class="sticky top-0 z-50 bg-white shadow-sm">
-      <div class="bg-[#f0f4f8] py-1.5 px-6 md:px-12 text-right text-xs font-medium text-blue-900 border-b border-gray-200">
-        <a href="#" class="hover:underline">Donate</a>
-      </div>
+      <TopUtilityBar />
       <nav class="max-w-7xl mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
         <router-link to="/" class="flex items-center">
           <img src="https://www.bookshare.org/images/logo_.png" alt="Bookshare" class="h-20" />
@@ -210,6 +208,10 @@
     </footer>
   </div>
 </template>
+
+<script setup>
+import TopUtilityBar from "../components/TopUtilityBar.vue";
+</script>
 
 <style>
 * {

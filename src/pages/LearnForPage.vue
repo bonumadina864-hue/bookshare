@@ -1,10 +1,7 @@
 <template>
   <div class="bg-white font-sans">
     <header>
-      <div class="bg-gray-100 py-1 px-10 text-right text-xs text-blue-900 border-b">
-        <a href="#" class="hover:underline">Donate</a> |
-        <span class="cursor-pointer">English <i class="fas fa-chevron-down ml-1"></i></span>
-      </div>
+      <TopUtilityBar />
       <nav class="bg-white py-4 px-10 flex justify-between items-center sticky top-0 z-50 shadow-sm">
         <div class="flex items-center space-x-10">
           <div class="text-2xl font-bold text-blue-900 flex items-center">
@@ -312,6 +309,7 @@
 
 <script setup>
 import { ref } from 'vue'
+import TopUtilityBar from "../components/TopUtilityBar.vue";
 import kitob1 from '../img/kitob1.png'
 import kitob2 from '../img/kitob2.png'
 import kitob3 from '../img/kitob3.png'

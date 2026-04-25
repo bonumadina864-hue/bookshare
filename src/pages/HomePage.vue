@@ -1,10 +1,7 @@
 <template>
   <div class="bg-white">
     <header>
-      <div class="bg-gray-100 py-1 px-10 text-right text-xs text-blue-900 border-b">
-        <a href="#" class="hover:underline">Donate</a> |
-        <span class="cursor-pointer">English <i class="fas fa-chevron-down ml-1"></i></span>
-      </div>
+      <TopUtilityBar />
       <nav class="bg-white py-4 px-6 lg:px-10 flex justify-between items-center sticky top-0 z-50 shadow-sm">
         <div class="flex items-center space-x-8">
           <div class="text-2xl font-bold text-blue-900 flex items-center">
@@ -18,7 +15,7 @@
                 :class="openMenu === 'what' ? 'border-2 border-blue-500 px-5 py-2 text-black' : 'px-0 py-0 hover:text-blue-800'"
                 @click="toggleMenu('what')"
               >
-                What is Bookshare? <i class="fas fa-chevron-down text-[10px]"></i>
+                {{ t("navWhatIsBookshare") }} <i class="fas fa-chevron-down text-[10px]"></i>
               </button>
               <div v-if="openMenu === 'what'" class="absolute left-0 top-full z-50 mt-2 w-64 rounded-lg border border-gray-200 bg-white py-2 shadow-lg">
                 <router-link to="/bookshare-library" class="block px-5 py-3 text-base font-normal text-gray-800 hover:bg-gray-100" @click="openMenu = null">Bookshare Library</router-link>
@@ -32,7 +29,7 @@
                 :class="openMenu === 'who' ? 'border-2 border-blue-500 px-5 py-2 text-black' : 'px-0 py-0 hover:text-blue-800'"
                 @click="toggleMenu('who')"
               >
-                Who is Bookshare for? <i class="fas fa-chevron-down text-[10px]"></i>
+                {{ t("navWhoIsBookshareFor") }} <i class="fas fa-chevron-down text-[10px]"></i>
               </button>
               <div v-if="openMenu === 'who'" class="absolute left-0 top-full z-50 mt-2 w-80 rounded-lg border border-gray-200 bg-white py-2 shadow-lg">
                 <a href="#" class="block px-5 py-3 text-base font-normal text-gray-800 hover:bg-gray-100">Parents and students</a>
@@ -42,27 +39,27 @@
                 <a href="#" class="block px-5 py-3 text-base font-normal text-gray-800 hover:bg-gray-100">Global</a>
               </div>
             </div>
-            <a href="#" class="hover:text-blue-800">Explore our library</a>
+            <a href="#" class="hover:text-blue-800">{{ t("navExploreLibrary") }}</a>
           </div>
         </div>
         <div class="flex items-center space-x-6">
           <router-link to="/login" class="font-bold flex items-center text-gray-800 hover:text-blue-800">
-            <i class="far fa-user-circle text-2xl mr-2"></i> Log in
+            <i class="far fa-user-circle text-2xl mr-2"></i> {{ t("navLogin") }}
           </router-link>
-          <router-link to="/signup" class="bg-dark-navy text-white px-6 py-2 rounded-md font-bold hover:bg-black transition">Sign up</router-link>
+          <router-link to="/signup" class="bg-dark-navy text-white px-6 py-2 rounded-md font-bold hover:bg-black transition">{{ t("navSignup") }}</router-link>
         </div>
       </nav>
     </header>
 
     <section class="bg-bookshare-blue text-white pt-16 pb-12 text-center">
-      <h1 class="text-6xl font-bold mb-6">Get ready for summer reading</h1>
-      <p class="text-xl mb-10 opacity-90 max-w-3xl mx-auto">Lock in this years gains for your students with an Individual Membership.</p>
+      <h1 class="text-6xl font-bold mb-6">{{ t("heroTitle") }}</h1>
+      <p class="text-xl mb-10 opacity-90 max-w-3xl mx-auto">{{ t("heroSubtitle") }}</p>
       <div class="flex justify-center items-center space-x-6 mb-16">
-        <router-link to="/learn-more" class="font-bold border-b-2 border-white pb-1 hover:opacity-80">Learn more ></router-link>
-        <router-link to="/signup" class="border-2 border-white px-7 py-4 rounded-md font-bold hover:bg-white hover:text-blue-800 transition">Sign up</router-link>
+        <router-link to="/learn-more" class="font-bold border-b-2 border-white pb-1 hover:opacity-80">{{ t("heroLearnMore") }}</router-link>
+        <router-link to="/signup" class="border-2 border-white px-7 py-4 rounded-md font-bold hover:bg-white hover:text-blue-800 transition">{{ t("heroSignup") }}</router-link>
       </div>
-      <div class="flex justify-center">
-        <img src="https://www.bookshare.org/wp-content/uploads/2026/04/students_classroom_laptop-768x767.png" alt="Hero image" style="width: 536px; height: auto" />
+      <div class="flex justify-center bg-bookshare-blue">
+        <img class="hero-circle-image block" src="https://www.bookshare.org/wp-content/uploads/2026/04/students_classroom_laptop-768x767.png" alt="Hero image" style="width: 536px; height: auto" />
       </div>
     </section>
 
@@ -419,9 +416,12 @@
 
 <script setup>
 import { onBeforeUnmount, onMounted, ref } from "vue";
+import TopUtilityBar from "../components/TopUtilityBar.vue";
+import { useLanguage } from "../composables/useLanguage";
 
 const openMenu = ref(null);
 const menuWrapRef = ref(null);
+const { t } = useLanguage();
 
 const toggleMenu = (name) => {
   openMenu.value = openMenu.value === name ? null : name;
@@ -448,7 +448,14 @@ body {
 }
 
 .bg-bookshare-blue {
-  background-color: #003082;
+  background-color: #224892;
+}
+
+.hero-circle-image {
+  /* Feather edges so image melts into background */
+  box-shadow: 0 0 0 2px #224892;
+  -webkit-mask-image: radial-gradient(circle at center, #000 63%, rgba(0, 0, 0, 0.65) 68%, transparent 74%);
+  mask-image: radial-gradient(circle at center, #000 63%, rgba(0, 0, 0, 0.65) 68%, transparent 74%);
 }
 .bg-dark-navy {
   background-color: #001529;

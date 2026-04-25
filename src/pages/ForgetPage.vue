@@ -5,7 +5,7 @@
         <div class="header-inner">
           <div class="bs-logo-wrapper">
             <router-link to="/" class="bookshare-brand">
-              <img src="https://www.bookshare.org/images/logo_.png" alt="Bookshare" />
+              <img src="https://www.bookshare.org/wp-content/uploads/2024/04/White_BKS_Logo_2023.png" alt="Bookshare" />
             </router-link>
           </div>
           <div class="bs-login-link">
@@ -78,16 +78,16 @@ body {
 }
 
 .bs-forgot-header {
-  background-color: #2e4899;
-  padding: 14px 0;
+  background-color: #2b4089;
+  padding: 16px 0;
   font-family: "Open Sans", Arial, sans-serif;
   width: 100%;
 }
 
 .bs-container {
-  max-width: 1140px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 100px;
 }
 
 .header-inner {
@@ -110,7 +110,7 @@ body {
 }
 
 .bs-logo-wrapper img {
-  height: 50px;
+  height: 74px;
   width: auto;
   display: block;
 }
@@ -118,9 +118,9 @@ body {
 .bs-login-link a {
   color: #ffffff;
   text-decoration: none;
-  font-size: 26px;
-  font-weight: 400;
-  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Open Sans", Arial, sans-serif;
   transition: opacity 0.2s;
 }
 
@@ -250,6 +250,10 @@ body {
 }
 
 @media (max-width: 768px) {
+  .bs-container {
+    padding: 0 16px;
+  }
+
   .bs-forgot-header {
     padding: 10px 0;
   }
@@ -259,7 +263,7 @@ body {
   }
 
   .bs-logo-wrapper img {
-    height: 36px;
+    height: 46px;
     width: auto;
   }
 
@@ -267,9 +271,7 @@ body {
     font-size: 30px;
   }
 
-  .bs-login-link a {
-    font-size: 18px;
-  }
+  .bs-login-link a { font-size: 14px; }
 
   .footer-top-row {
     flex-direction: column;

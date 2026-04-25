@@ -1,10 +1,7 @@
 <template>
   <div class="min-h-screen bg-white text-slate-800">
     <header>
-      <div class="bg-gray-100 py-1 px-10 text-right text-xs text-blue-900 border-b">
-        <a href="#" class="hover:underline">Donate</a> |
-        <span class="cursor-pointer">English <i class="fas fa-chevron-down ml-1"></i></span>
-      </div>
+      <TopUtilityBar />
       <nav class="bg-white py-4 px-6 lg:px-10 flex justify-between items-center sticky top-0 z-50 shadow-sm">
         <div class="flex items-center space-x-8">
           <div class="text-2xl font-bold text-blue-900 flex items-center">
@@ -45,11 +42,12 @@
             <a href="#" class="hover:text-blue-800">Explore our library</a>
           </div>
         </div>
-        <div class="flex items-center space-x-6">
-          <router-link to="/login" class="font-bold flex items-center text-gray-800 hover:text-blue-800">
-            <i class="far fa-user-circle text-2xl mr-2"></i> Log in
+        <div class="flex items-center space-x-4">
+          <router-link to="/login" class="inline-flex items-center gap-1 text-sm font-medium text-[#003366] hover:text-[#002244]">
+            <i class="far fa-user text-[14px]"></i>
+            <span>Log in</span>
           </router-link>
-          <router-link to="/signup" class="bg-[#001529] text-white px-6 py-2 rounded-md font-bold hover:bg-black transition">Sign up</router-link>
+          <router-link to="/signup" class="rounded-md bg-[#1a202c] px-4 py-1.5 text-sm font-medium text-white hover:bg-[#111827] transition">Sign up</router-link>
         </div>
       </nav>
     </header>
@@ -208,6 +206,7 @@
 
 <script setup>
 import { onBeforeUnmount, onMounted, ref } from "vue";
+import TopUtilityBar from "../components/TopUtilityBar.vue";
 import kitob1 from "../img/kitob1.png";
 import kitob2 from "../img/kitob2.png";
 import kitob3 from "../img/kitob3.png";

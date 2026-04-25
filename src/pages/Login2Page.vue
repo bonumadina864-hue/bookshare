@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from "vue";
+import TopUtilityBar from "../components/TopUtilityBar.vue";
 
 const mobileMenuOpen = ref(false);
 
@@ -10,11 +11,7 @@ const toggleMenu = () => {
 
 <template>
   <div class="bg-[#0647b9]">
-    <div class="bg-[#f0f4f8] py-1.5 px-6 md:px-12 text-right text-xs font-medium text-blue-900 border-b border-gray-200">
-      <a href="#" class="hover:underline">Donate</a>
-      <span class="mx-2 text-gray-300">|</span>
-      <button class="hover:text-blue-700">English <i class="fas fa-chevron-down ml-1"></i></button>
-    </div>
+    <TopUtilityBar />
 
     <header class="sticky top-0 z-50 bg-white shadow-sm">
       <nav class="max-w-7xl mx-auto px-6 md:px-12 py-4 flex justify-between items-center">

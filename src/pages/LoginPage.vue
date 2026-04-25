@@ -12,7 +12,7 @@ const toggleMenu = () => {
   <div>
     <header class="navbar">
       <div class="logo">
-        <router-link to="/"><img src="https://www.bookshare.org/images/logo_.png" alt="" /></router-link>
+        <router-link to="/"><img src="https://www.bookshare.org/wp-content/uploads/2024/04/White_BKS_Logo_2023.png" alt="Bookshare" /></router-link>
       </div>
       <button class="burger-btn" @click="toggleMenu">
         <i class="fas fa-bars"></i>
@@ -96,7 +96,7 @@ const toggleMenu = () => {
 
 .navbar {
   background-color: #2b4089;
-  padding: 15px 100px;
+  padding: 16px 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -104,7 +104,7 @@ const toggleMenu = () => {
 }
 
 .logo img {
-  height: 52px;
+  height: 74px;
   width: auto;
   display: block;
 }
@@ -265,7 +265,7 @@ const toggleMenu = () => {
   }
 
   .logo img {
-    height: 40px;
+    height: 46px;
   }
 
   .nav-links {
