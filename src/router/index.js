@@ -8,6 +8,8 @@ import LoginPage from "../pages/LoginPage.vue";
 import Login2Page from "../pages/Login2Page.vue";
 import SignupPage from "../pages/SignupPage.vue";
 import ForgetPage from "../pages/ForgetPage.vue";
+import HigherEducationStudentsPage from "../pages/HigherEducationStudentsPage.vue";
+import GlobalPage from "../pages/GlobalPage.vue";
 
 const routes = [
   { path: "/", name: "home", component: HomePage },
@@ -19,6 +21,8 @@ const routes = [
   { path: "/login2", name: "login2", component: Login2Page },
   { path: "/signup", name: "signup", component: SignupPage },
   { path: "/forget", name: "forget", component: ForgetPage },
+  { path: "/higher-education-students", name: "higher-education-students", component: HigherEducationStudentsPage },
+  { path: "/global", name: "global", component: GlobalPage },
 ];
 
 export default createRouter({
