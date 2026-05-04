@@ -41,7 +41,13 @@
             </div>
           </div>
 
-          <a href="#" class="hover:text-blue-800">{{ t("navExploreLibrary") }}</a>
+          <router-link
+            to="/explore-library"
+            class="transition-colors duration-200 hover:text-blue-800"
+            @click="openMenu = null"
+          >
+            {{ t("navExploreLibrary") }}
+          </router-link>
         </div>
       </div>
 
@@ -60,7 +66,7 @@
     <div v-if="mobileMenuOpen" class="space-y-3 border-t border-gray-200 bg-white px-6 py-4 font-semibold text-[#003082] lg:hidden">
       <a href="#" class="block">What is Bookshare?</a>
       <a href="#" class="block">Who is Bookshare for?</a>
-      <a href="#" class="block">Explore our library</a>
+      <router-link to="/explore-library" class="block" @click="mobileMenuOpen = false">Explore our library</router-link>
       <router-link to="/higher-education-students" class="block" @click="mobileMenuOpen = false">Higher education students</router-link>
       <router-link to="/global" class="block" @click="mobileMenuOpen = false">Global</router-link>
       <router-link to="/login" class="block" @click="mobileMenuOpen = false">{{ t("navLogin") }}</router-link>
