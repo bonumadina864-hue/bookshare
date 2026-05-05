@@ -1,27 +1,5 @@
 <template>
   <div class="bg-white font-sans">
-    <header>
-      <TopUtilityBar />
-      <nav class="bg-white py-4 px-10 flex justify-between items-center sticky top-0 z-50 shadow-sm">
-        <div class="flex items-center space-x-10">
-          <div class="text-2xl font-bold text-blue-900 flex items-center">
-            <router-link to="/"><img src="https://www.bookshare.org/images/logo_.png" alt="" /></router-link>
-          </div>
-          <div class="hidden lg:flex space-x-6 font-semibold text-gray-700">
-            <a href="#" class="hover:text-blue-800">What is Bookshare? <i class="fas fa-chevron-down text-[10px]"></i></a>
-            <a href="#" class="hover:text-blue-800">Who is Bookshare for? <i class="fas fa-chevron-down text-[10px]"></i></a>
-            <a href="#" class="hover:text-blue-800">Explore our library</a>
-          </div>
-        </div>
-        <div class="flex items-center space-x-6">
-          <router-link to="/login" class="font-bold flex items-center text-gray-800 hover:text-blue-800">
-            <i class="far fa-user-circle text-2xl mr-2"></i> Log in
-          </router-link>
-          <router-link to="/signup" class="bg-[#111d30] text-white px-6 py-2 rounded-md font-bold hover:bg-black transition">Sign up</router-link>
-        </div>
-      </nav>
-    </header>
-
     <section class="hero-sunburst text-white">
       <div class="max-w-7xl mx-auto py-24 px-12">
         <h1 class="text-[64px] font-bold leading-none">Parents and students</h1>
@@ -235,81 +213,11 @@
       </div>
     </section>
 
-    <footer class="bg-[#123f8d] text-white">
-      <div class="mx-auto w-full max-w-[1240px] px-8 py-16">
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-12 gap-y-8">
-          <div class="space-y-3">
-            <h4 class="uppercase font-bold text-lg">ABOUT</h4>
-            <a href="#" class="block underline text-sm">Who we are</a>
-            <a href="#" class="block underline text-sm">Careers</a>
-            <a href="#" class="block underline text-sm">Events</a>
-            <a href="#" class="block underline text-sm">Media Kit</a>
-          </div>
-
-          <div class="space-y-3">
-            <h4 class="uppercase font-bold text-lg">GET INVOLVED</h4>
-            <a href="#" class="block underline text-sm">Donate</a>
-            <a href="#" class="block underline text-sm">Partner with us</a>
-          </div>
-
-          <div class="space-y-3">
-            <h4 class="uppercase font-bold text-lg">HELP</h4>
-            <a href="#" class="block underline text-sm">Help and learning center</a>
-            <a href="#" class="block underline text-sm">Contact us</a>
-            <a href="#" class="block underline text-sm">Site map</a>
-          </div>
-
-          <div class="space-y-3">
-            <h4 class="uppercase font-bold text-lg">LEGAL</h4>
-            <a href="#" class="block underline text-sm">Legal</a>
-            <a href="#" class="block underline text-sm">Privacy</a>
-            <a href="#" class="block underline text-sm">Accessibility</a>
-          </div>
-
-          <div class="space-y-3">
-            <h4 class="uppercase font-bold text-lg">FOLLOW US</h4>
-            <a href="#" class="block underline text-sm">Our blog</a>
-            <a href="#" class="block underline text-sm">Facebook</a>
-            <a href="#" class="block underline text-sm">Instagram</a>
-            <a href="#" class="block underline text-sm">X</a>
-            <a href="#" class="block underline text-sm">Youtube</a>
-          </div>
-
-          <div class="space-y-3">
-            <h4 class="uppercase font-bold text-lg">DOWNLOAD APP</h4>
-            <a href="#" class="block underline text-sm">Apple/iOS</a>
-            <a href="#" class="block underline text-sm">Google/Android</a>
-            <a href="#" class="block underline text-sm">Amazon Alexa</a>
-          </div>
-        </div>
-
-        <div class="my-10 border-t border-white/35"></div>
-
-        <div class="flex flex-col md:flex-row items-start gap-8 md:gap-10">
-          <img
-            src="https://www.bookshare.org/wp-content/uploads/2024/04/White_BKS_Logo_2023.png"
-            alt="Bookshare logo"
-            class="h-10 w-auto"
-          />
-          <div class="max-w-[760px] text-[11px] leading-5 text-white/90">
-            <p>
-              This project is supported by the U.S. Department of Education, Office of Special Education Programs (Award Number H327D220002).
-              Opinions expressed herein are those of the authors and do not necessarily represent the position of the U.S. Department of Education.
-            </p>
-            <p class="mt-3">
-              Bookshare and Benetech are registered trademarks of Beneficent Technology, Inc. Copyright 2026, Beneficent Technology, Inc.
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
-
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import TopUtilityBar from "../components/TopUtilityBar.vue";
 import kitob1 from '../img/kitob1.png'
 import kitob2 from '../img/kitob2.png'
 import kitob3 from '../img/kitob3.png'

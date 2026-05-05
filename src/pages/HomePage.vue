@@ -1,7 +1,5 @@
 <template>
   <div class="bg-white">
-    <MainHeader />
-
     <section class="bg-bookshare-blue text-white pt-16 pb-12 text-center">
       <h1 class="text-6xl font-bold mb-6">{{ t("heroTitle") }}</h1>
       <p class="text-xl mb-10 opacity-90 max-w-3xl mx-auto">{{ t("heroSubtitle") }}</p>
@@ -68,14 +66,14 @@
         </div>
       </router-link>
 
-      <a href="#" class="relative flex-1 h-[450px] group overflow-hidden border-r border-white/20 last:border-0 flex flex-col justify-end">
+      <router-link to="/educators-and-schools" class="relative flex-1 h-[450px] group overflow-hidden border-r border-white/20 last:border-0 flex flex-col justify-end">
         <img src="https://www.bookshare.org/wp-content/uploads/2024/02/Teacher-holding-tablet-in-computer-lab.jpg" class="absolute inset-0 w-full h-full object-cover" />
         <div class="absolute inset-0 bg-gradient-to-t from-[#1a4789] via-[#1a4789] via-25% to-transparent opacity-100 transition-colors duration-300 group-hover:from-[#23529c] group-hover:via-[#23529c]"></div>
         <div class="relative p-6 pb-10 text-white z-10">
           <h3 class="text-[22px] font-bold mb-3 leading-tight">Educators and schools</h3>
           <p class="text-[14px] leading-snug opacity-90">Help students build literacy skills and accelerate learning.</p>
         </div>
-      </a>
+      </router-link>
 
       <router-link to="/higher-education-students" class="relative flex-1 h-[450px] group overflow-hidden border-r border-white/20 last:border-0 flex flex-col justify-end">
         <img src="https://www.pocklington.org.uk/wp-content/uploads/2024/09/young-student-with-a-pile-of-books-holding-a-book-smiling-and-looking-up-lr-scaled-aspect-ratio-750-425.jpg" class="absolute inset-0 w-full h-full object-cover" />
@@ -86,14 +84,14 @@
         </div>
       </router-link>
 
-      <a href="#" class="relative flex-1 h-[450px] group overflow-hidden border-r border-white/20 last:border-0 flex flex-col justify-end">
+      <router-link to="/adults" class="relative flex-1 h-[450px] group overflow-hidden border-r border-white/20 last:border-0 flex flex-col justify-end">
         <img src="https://news.ki.se/sites/nyheter/files/styles/article_full_width/public/qbank/GettyImages-2191411104_custom20260421081229.webp" class="absolute inset-0 w-full h-full object-cover" />
         <div class="absolute inset-0 bg-gradient-to-t from-[#1a4789] via-[#1a4789] via-25% to-transparent opacity-100 transition-colors duration-300 group-hover:from-[#23529c] group-hover:via-[#23529c]"></div>
         <div class="relative p-6 pb-10 text-white z-10">
           <h3 class="text-[22px] font-bold mb-3 leading-tight">Adults</h3>
           <p class="text-[14px] leading-snug opacity-90">Read and learn anything you want with books on every topic or interest.</p>
         </div>
-      </a>
+      </router-link>
 
       <router-link to="/global" class="relative flex-1 h-[450px] group overflow-hidden flex flex-col justify-end">
         <img src="/@fs/C:/Users/MadinaBonu/.cursor/projects/c-Users-MadinaBonu-Desktop-boookshare/assets/c__Users_MadinaBonu_AppData_Roaming_Cursor_User_workspaceStorage_924acba6fb5f966a6ba633c59207f57f_images_image-69de2bc2-24e5-4a03-85a5-e94cccc40a42.png" class="absolute inset-0 w-full h-full object-cover" />
@@ -218,7 +216,7 @@
       </div>
     </section>
 
-    <section class="bg-white py-20 px-6">
+    <section id="who-we-are" class="bg-white py-20 px-6 scroll-mt-24">
       <div class="max-w-6xl mx-auto flex flex-col items-center text-center">
         <h2 class="text-[#1a365d] font-bold text-5xl mb-10">Our partners</h2>
 
@@ -282,91 +280,10 @@
         </p>
       </div>
     </section>
-
-    <footer class="bg-[#0a327d] text-white py-16 px-8 font-sans">
-      <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10">
-          <div>
-            <h4 class="uppercase font-bold text-lg mb-4">About</h4>
-            <ul class="space-y-3 text-sm">
-              <li><a href="#" class="underline">Who we are</a></li>
-              <li><a href="#" class="underline">Careers</a></li>
-              <li><a href="#" class="underline">Events</a></li>
-              <li><a href="#" class="underline">Media Kit</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="uppercase font-bold text-lg mb-4">Get Involved</h4>
-            <ul class="space-y-3 text-sm">
-              <li><a href="#" class="underline">Donate</a></li>
-              <li><a href="#" class="underline">Partner with us</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="uppercase font-bold text-lg mb-4">Help</h4>
-            <ul class="space-y-3 text-sm">
-              <li><a href="#" class="underline">Help and learning center</a></li>
-              <li><a href="#" class="underline">Contact us</a></li>
-              <li><a href="#" class="underline">Site map</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="uppercase font-bold text-lg mb-4">Legal</h4>
-            <ul class="space-y-3 text-sm">
-              <li><a href="#" class="underline">Legal</a></li>
-              <li><a href="#" class="underline">Privacy</a></li>
-              <li><a href="#" class="underline">Accessibility</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="uppercase font-bold text-lg mb-4">Follow Us</h4>
-            <ul class="space-y-3 text-sm">
-              <li><a href="#" class="underline">Our blog</a></li>
-              <li><a href="#" class="underline">Facebook</a></li>
-              <li><a href="#" class="underline">Instagram</a></li>
-              <li><a href="#" class="underline">X</a></li>
-              <li><a href="#" class="underline">Youtube</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="uppercase font-bold text-lg mb-4">Download App</h4>
-            <ul class="space-y-3 text-sm">
-              <li><a href="#" class="underline">Apple/iOS</a></li>
-              <li><a href="#" class="underline">Google/Android</a></li>
-              <li><a href="#" class="underline">Amazon Alexa</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="border-t border-white/30 mt-14 pt-8">
-          <div class="flex flex-col md:flex-row md:items-center gap-6 md:gap-8">
-            <div class="shrink-0">
-              <img
-                src="https://www.bookshare.org/wp-content/uploads/2024/04/White_BKS_Logo_2023.png"
-                alt="Bookshare logo"
-                class="h-10 w-auto"
-              />
-            </div>
-            <div class="text-[11px] leading-relaxed text-white/95 max-w-4xl">
-              <p>
-                This project is supported by the U.S. Department of Education, Office of Special Education Programs (Award
-                Number H327D220002). Opinions expressed herein are those of the authors and do not necessarily represent the
-                position of the U.S. Department of Education.
-              </p>
-              <p class="mt-3">
-                Bookshare® and Benetech® are registered trademarks of Beneficent Technology, Inc. © Copyright 2026,
-                Beneficent Technology, Inc.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
   </div>
 </template>
 
 <script setup>
-import MainHeader from "../components/MainHeader.vue";
 import { useLanguage } from "../composables/useLanguage";
 
 const { t } = useLanguage();

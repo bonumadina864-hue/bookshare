@@ -33,15 +33,15 @@
               {{ t("navWhoIsBookshareFor") }} <i class="fas fa-chevron-down text-[10px]"></i>
             </button>
             <div v-if="openMenu === 'who'" class="absolute left-0 top-full z-50 mt-2 w-80 rounded-lg border border-gray-200 bg-white py-2 shadow-lg">
-              <a href="#" class="block px-5 py-3 text-base font-normal text-gray-800 hover:bg-gray-100">Parents and students</a>
-              <a href="#" class="block px-5 py-3 text-base font-normal text-gray-800 hover:bg-gray-100">Educators and schools</a>
+              <router-link to="/learn-for" class="block px-5 py-3 text-base font-normal text-gray-800 hover:bg-gray-100" @click="openMenu = null">Parents and students</router-link>
+              <router-link to="/educators-and-schools" class="block px-5 py-3 text-base font-normal text-gray-800 hover:bg-gray-100" @click="openMenu = null">Educators and schools</router-link>
               <router-link to="/higher-education-students" class="block px-5 py-3 text-base font-normal text-gray-800 hover:bg-gray-100" @click="openMenu = null">Higher education students</router-link>
-              <a href="#" class="block px-5 py-3 text-base font-normal text-gray-800 hover:bg-gray-100">Adults</a>
+              <router-link to="/adults" class="block px-5 py-3 text-base font-normal text-gray-800 hover:bg-gray-100" @click="openMenu = null">Adults</router-link>
               <router-link to="/global" class="block px-5 py-3 text-base font-normal text-gray-800 hover:bg-gray-100" @click="openMenu = null">Global</router-link>
             </div>
           </div>
 
-          <a href="#" class="hover:text-blue-800">{{ t("navExploreLibrary") }}</a>
+          <router-link to="/bookshare-library" class="hover:text-blue-800">{{ t("navExploreLibrary") }}</router-link>
         </div>
       </div>
 
@@ -58,10 +58,13 @@
     </nav>
 
     <div v-if="mobileMenuOpen" class="space-y-3 border-t border-gray-200 bg-white px-6 py-4 font-semibold text-[#003082] lg:hidden">
-      <a href="#" class="block">What is Bookshare?</a>
-      <a href="#" class="block">Who is Bookshare for?</a>
-      <a href="#" class="block">Explore our library</a>
+      <router-link to="/bookshare-library" class="block" @click="mobileMenuOpen = false">Bookshare Library</router-link>
+      <router-link to="/bookshare-reader" class="block" @click="mobileMenuOpen = false">Bookshare Reader</router-link>
+      <router-link to="/bookshare-library" class="block" @click="mobileMenuOpen = false">{{ t("navExploreLibrary") }}</router-link>
+      <router-link to="/learn-for" class="block" @click="mobileMenuOpen = false">Parents and students</router-link>
+      <router-link to="/educators-and-schools" class="block" @click="mobileMenuOpen = false">Educators and schools</router-link>
       <router-link to="/higher-education-students" class="block" @click="mobileMenuOpen = false">Higher education students</router-link>
+      <router-link to="/adults" class="block" @click="mobileMenuOpen = false">Adults</router-link>
       <router-link to="/global" class="block" @click="mobileMenuOpen = false">Global</router-link>
       <router-link to="/login" class="block" @click="mobileMenuOpen = false">{{ t("navLogin") }}</router-link>
       <router-link to="/signup" class="inline-block rounded-md bg-[#001529] px-4 py-2 text-white" @click="mobileMenuOpen = false">{{ t("navSignup") }}</router-link>

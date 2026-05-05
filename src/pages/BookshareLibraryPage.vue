@@ -1,57 +1,5 @@
 <template>
   <div class="min-h-screen bg-white text-slate-800">
-    <header>
-      <TopUtilityBar />
-      <nav class="bg-white py-4 px-6 lg:px-10 flex justify-between items-center sticky top-0 z-50 shadow-sm">
-        <div class="flex items-center space-x-8">
-          <div class="text-2xl font-bold text-blue-900 flex items-center">
-            <router-link to="/"><img src="https://www.bookshare.org/images/logo_.png" alt="" /></router-link>
-          </div>
-          <div ref="menuWrapRef" class="relative hidden lg:flex items-center space-x-8 text-base font-semibold text-gray-800">
-            <div class="relative">
-              <button
-                type="button"
-                class="rounded-2xl transition"
-                :class="openMenu === 'what' ? 'border-2 border-blue-500 px-5 py-2 text-black' : 'px-0 py-0 hover:text-blue-800'"
-                @click="toggleMenu('what')"
-              >
-                What is Bookshare? <i class="fas fa-chevron-down text-[10px]"></i>
-              </button>
-              <div v-if="openMenu === 'what'" class="absolute left-0 top-full z-50 mt-2 w-64 rounded-lg border border-gray-200 bg-white py-2 shadow-lg">
-                <router-link to="/bookshare-library" class="block px-5 py-3 text-base font-normal text-gray-800 hover:bg-gray-100" @click="openMenu = null">Bookshare Library</router-link>
-                <router-link to="/bookshare-reader" class="block px-5 py-3 text-base font-normal text-gray-800 hover:bg-gray-100" @click="openMenu = null">Bookshare Reader</router-link>
-              </div>
-            </div>
-            <div class="relative">
-              <button
-                type="button"
-                class="rounded-2xl transition"
-                :class="openMenu === 'who' ? 'border-2 border-blue-500 px-5 py-2 text-black' : 'px-0 py-0 hover:text-blue-800'"
-                @click="toggleMenu('who')"
-              >
-                Who is Bookshare for? <i class="fas fa-chevron-down text-[10px]"></i>
-              </button>
-              <div v-if="openMenu === 'who'" class="absolute left-0 top-full z-50 mt-2 w-80 rounded-lg border border-gray-200 bg-white py-2 shadow-lg">
-                <a href="#" class="block px-5 py-3 text-base font-normal text-gray-800 hover:bg-gray-100">Parents and students</a>
-                <a href="#" class="block px-5 py-3 text-base font-normal text-gray-800 hover:bg-gray-100">Educators and schools</a>
-                <a href="#" class="block px-5 py-3 text-base font-normal text-gray-800 hover:bg-gray-100">Higher education students</a>
-                <a href="#" class="block px-5 py-3 text-base font-normal text-gray-800 hover:bg-gray-100">Adults</a>
-                <a href="#" class="block px-5 py-3 text-base font-normal text-gray-800 hover:bg-gray-100">Global</a>
-              </div>
-            </div>
-            <a href="#" class="hover:text-blue-800">Explore our library</a>
-          </div>
-        </div>
-        <div class="flex items-center space-x-4">
-          <router-link to="/login" class="inline-flex items-center gap-1 text-sm font-medium text-[#003366] hover:text-[#002244]">
-            <i class="far fa-user text-[14px]"></i>
-            <span>Log in</span>
-          </router-link>
-          <router-link to="/signup" class="rounded-md bg-[#1a202c] px-4 py-1.5 text-sm font-medium text-white hover:bg-[#111827] transition">Sign up</router-link>
-        </div>
-      </nav>
-    </header>
-
     <main>
       <section class="bg-[linear-gradient(130deg,#1d4ba1_0%,#17418f_100%)] py-16">
         <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -180,60 +128,16 @@
         </div>
       </section>
     </main>
-
-    <footer class="bg-blue-900 py-12 text-white">
-      <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-2 gap-8 border-b border-blue-800 pb-10 sm:grid-cols-3 lg:grid-cols-6">
-          <div v-for="column in footerColumns" :key="column.title" class="space-y-2">
-            <h4 class="text-lg font-semibold uppercase tracking-wide">{{ column.title }}</h4>
-            <a v-for="item in column.items" :key="item" href="#" class="block text-base text-blue-100 hover:underline">{{ item }}</a>
-          </div>
-        </div>
-        <div class="mt-8 grid grid-cols-1 items-start gap-5 md:grid-cols-[160px,1fr]">
-          <img src="https://www.bookshare.org/wp-content/uploads/2024/04/White_BKS_Logo_2023.png" alt="Bookshare white logo" class="h-9 w-auto" />
-          <p class="text-sm leading-7 text-blue-100">
-            This project is supported by the U.S. Department of Education, Office of Special Education Programs (Award Number
-            H327D220002). Opinions expressed herein are those of the authors and do not necessarily represent the position of the U.S.
-            Department of Education.
-            <br /><br />
-            Bookshare and Benetech are registered trademarks of Beneficent Technology, Inc. Copyright 2026, Beneficent Technology, Inc.
-          </p>
-        </div>
-      </div>
-    </footer>
   </div>
 </template>
 
 <script setup>
-import { onBeforeUnmount, onMounted, ref } from "vue";
-import TopUtilityBar from "../components/TopUtilityBar.vue";
 import kitob1 from "../img/kitob1.png";
 import kitob2 from "../img/kitob2.png";
 import kitob3 from "../img/kitob3.png";
 import kitob4 from "../img/kitob4.png";
 import kitob5 from "../img/kitob5.png";
 import kitob6 from "../img/kitob6.png";
-
-const openMenu = ref(null);
-const menuWrapRef = ref(null);
-
-const toggleMenu = (name) => {
-  openMenu.value = openMenu.value === name ? null : name;
-};
-
-const handleOutsideClick = (event) => {
-  if (menuWrapRef.value && !menuWrapRef.value.contains(event.target)) {
-    openMenu.value = null;
-  }
-};
-
-onMounted(() => {
-  document.addEventListener("click", handleOutsideClick);
-});
-
-onBeforeUnmount(() => {
-  document.removeEventListener("click", handleOutsideClick);
-});
 
 const features = [
   { title: "Trending titles", icon: "fas fa-headphones", description: "Catch up on the newest releases, bestsellers, and popular titles that your friends or book club are reading" },
@@ -260,14 +164,5 @@ const k12Books = [
   { label: "Accelerated Reader Middle School", image: kitob4 },
   { label: "Young Reader's Series", image: kitob5 },
   { label: "High Interest Young Adult", image: kitob6 },
-];
-
-const footerColumns = [
-  { title: "ABOUT", items: ["Who we are", "Careers", "Events", "Media Kit"] },
-  { title: "GET INVOLVED", items: ["Donate", "Partner with us"] },
-  { title: "HELP", items: ["Help and learning center", "Contact us", "Site map"] },
-  { title: "LEGAL", items: ["Legal", "Privacy", "Accessibility"] },
-  { title: "FOLLOW US", items: ["Our blog", "Facebook", "Instagram", "X", "Youtube"] },
-  { title: "DOWNLOAD APP", items: ["Apple/iOS", "Google/Android", "Amazon Alexa"] },
 ];
 </script>
