@@ -41,7 +41,13 @@
             </div>
           </div>
 
-          <router-link to="/bookshare-library" class="hover:text-blue-800">{{ t("navExploreLibrary") }}</router-link>
+          <router-link
+            to="/explore-library"
+            class="transition-colors duration-200 hover:text-blue-800"
+            @click="openMenu = null"
+          >
+            {{ t("navExploreLibrary") }}
+          </router-link>
         </div>
       </div>
 
@@ -60,7 +66,7 @@
     <div v-if="mobileMenuOpen" class="space-y-3 border-t border-gray-200 bg-white px-6 py-4 font-semibold text-[#003082] lg:hidden">
       <router-link to="/bookshare-library" class="block" @click="mobileMenuOpen = false">Bookshare Library</router-link>
       <router-link to="/bookshare-reader" class="block" @click="mobileMenuOpen = false">Bookshare Reader</router-link>
-      <router-link to="/bookshare-library" class="block" @click="mobileMenuOpen = false">{{ t("navExploreLibrary") }}</router-link>
+      <router-link to="/explore-library" class="block" @click="mobileMenuOpen = false">{{ t("navExploreLibrary") }}</router-link>
       <router-link to="/learn-for" class="block" @click="mobileMenuOpen = false">Parents and students</router-link>
       <router-link to="/educators-and-schools" class="block" @click="mobileMenuOpen = false">Educators and schools</router-link>
       <router-link to="/higher-education-students" class="block" @click="mobileMenuOpen = false">Higher education students</router-link>
