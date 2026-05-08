@@ -41,11 +41,11 @@
         <div>
           <h4 class="uppercase font-bold text-lg mb-4">Follow Us</h4>
           <ul class="space-y-3 text-sm">
-            <li><a href="#" class="underline">Our blog</a></li>
-            <li><a href="#" class="underline">Facebook</a></li>
-            <li><a href="#" class="underline">Instagram</a></li>
-            <li><a href="#" class="underline">X</a></li>
-            <li><a href="#" class="underline">Youtube</a></li>
+            <li><a href="https://www.bookshare.org/cms/blog" target="_blank" rel="noopener noreferrer" class="underline">Our blog</a></li>
+            <li><a href="https://www.facebook.com/bookshare" target="_blank" rel="noopener noreferrer" class="underline">Facebook</a></li>
+            <li><a href="https://www.instagram.com/bookshare_org/" target="_blank" rel="noopener noreferrer" class="underline">Instagram</a></li>
+            <li><a href="https://twitter.com/bookshare" target="_blank" rel="noopener noreferrer" class="underline">X</a></li>
+            <li><a href="https://www.youtube.com/user/Bookshare" target="_blank" rel="noopener noreferrer" class="underline">Youtube</a></li>
           </ul>
         </div>
         <div>
