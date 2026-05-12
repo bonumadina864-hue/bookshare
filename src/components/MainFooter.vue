@@ -19,15 +19,15 @@
           <h4 class="uppercase font-bold text-lg mb-4">Get Involved</h4>
           <ul class="space-y-3 text-sm">
             <li><router-link to="/donate" class="underline">Donate</router-link></li>
-            <li><a href="#" class="underline">Partner with us</a></li>
+            <li><router-link to="/partner-with-us" class="underline">Partner with us</router-link></li>
           </ul>
         </div>
         <div>
           <h4 class="uppercase font-bold text-lg mb-4">Help</h4>
           <ul class="space-y-3 text-sm">
             <li><a href="#" class="underline">Help and learning center</a></li>
-            <li><a href="#" class="underline">Contact us</a></li>
-            <li><a href="#" class="underline">Site map</a></li>
+            <li><router-link to="/contact-us" class="underline">Contact us</router-link></li>
+            <li><router-link to="/site-map" class="underline">Site map</router-link></li>
           </ul>
         </div>
         <div>

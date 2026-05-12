@@ -82,11 +82,13 @@
 import { onBeforeUnmount, onMounted, ref } from "vue";
 import TopUtilityBar from "./TopUtilityBar.vue";
 import { useLanguage } from "../composables/useLanguage";
+import { useRoute } from "vue-router";
 
 const openMenu = ref(null);
 const menuWrapRef = ref(null);
 const mobileMenuOpen = ref(false);
 const { t } = useLanguage();
+const route = useRoute();
 
 const toggleMenu = (name) => {
   openMenu.value = openMenu.value === name ? null : name;

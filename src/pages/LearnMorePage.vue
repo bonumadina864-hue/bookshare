@@ -109,116 +109,28 @@
     </section>
     <br /><br /><br />
     <section class="cta-section">
-      <h2 class="cta-title">Have more questions?</h2>
-      <div class="cta-buttons">
-        <a href="#" class="btn-dark"> Go to Help Center &nbsp; <span>→</span> </a>
-        <a href="#" class="link-blue"> Contact us &nbsp; <span>›</span> </a>
+      <div class="cta-container">
+        <h2 class="cta-title">Have more questions?</h2>
+        <div class="cta-buttons">
+          <a href="#" class="btn-help-center">
+            Go to Help Center
+            <svg class="cta-icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
+          <router-link to="/contact-us" class="link-contact">
+            Contact us
+            <svg class="cta-link-icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+            </svg>
+          </router-link>
+        </div>
       </div>
     </section>
   </div>
 </template>
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Open Sans", Arial, sans-serif;
-}
-body,
-html {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.top-utility-bar {
-  background-color: #e2f5ee;
-  padding: 8px 0;
-  text-align: right;
-  font-size: 13px;
-}
-
-.top-utility-bar a {
-  color: #003082;
-  text-decoration: none;
-  font-weight: 600;
-  margin-right: 20px;
-}
-
-.language-selector {
-  display: inline-block;
-  color: #003082;
-  cursor: pointer;
-}
-
-.main-header {
-  background: #fff;
-  padding: 20px 0;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.header-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo img {
-  height: 35px;
-}
-
-.main-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 25px;
-}
-
-.main-nav ul li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 600;
-  font-size: 15px;
-}
-
-.main-nav ul li a i {
-  font-size: 12px;
-  margin-left: 3px;
-}
-
-.header-auth {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.btn-log-in {
-  text-decoration: none;
-  color: #333;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.btn-sign-up {
-  background-color: #001a33;
-  color: white;
-  text-decoration: none;
-  padding: 10px 25px;
-  border-radius: 6px;
-  font-weight: 700;
-}
-
+<style scoped>
 .hero-box {
   background-color: #d8e6f3;
   background-image: radial-gradient(circle at 85% 20%, rgba(255, 255, 255, 0.6) 0%, transparent 55%);
@@ -355,102 +267,8 @@ html {
   }
 }
 
-.content-wrapper {
-  display: flex;
-  gap: 60px;
-  padding: 50px 0;
-}
-.main-article {
-  flex: 2;
-  left: 50px;
-}
-.summary-text {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-.check-list {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 35px;
-}
-.check-list li::before {
-  content: "•";
-  color: #333;
-  font-weight: bold;
-  display: inline-block;
-  width: 1.5em;
-  margin-left: 5px;
-}
-.check-list li {
-  margin-bottom: 8px;
-}
-
-.section-h2 {
-  font-size: 28px;
-  font-weight: 800;
-  margin: 40px 0 20px;
-  color: var(--text-dark);
-}
-.ordered-steps {
-  padding-left: 20px;
-}
-.ordered-steps li {
-  margin-bottom: 12px;
-}
-
-.option-block {
-  margin-top: 25px;
-}
-.option-block ul {
-  padding-left: 20px;
-  margin-top: 10px;
-  font-size: 14px;
-}
-
-.video-cta {
-  margin-top: 30px;
-  font-weight: 700;
-}
-.video-cta a {
-  color: var(--primary-blue);
-  text-decoration: underline;
-}
-.note-box {
-  border-top: 1px solid #eee;
-  margin-top: 40px;
-  padding-top: 20px;
-  font-size: 14px;
-}
-
-.sidebar-area {
-  flex: 1;
-}
-.side-card {
-  background: #f8fafc;
-  padding: 25px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-.side-card h3 {
-  font-size: 18px;
-  margin-bottom: 15px;
-  font-weight: 800;
-}
-.label-tag {
-  display: inline-block;
-  background: var(--tag-bg);
-  color: var(--tag-text);
-  padding: 5px 12px;
-  border-radius: 6px;
-  font-size: 13px;
-  font-weight: 600;
-  margin-right: 8px;
-  margin-bottom: 8px;
-}
-
 .similar-articles {
-  background-color: #ebf1f7;
+  background-color: #f0f7ff;
   padding: 80px 0;
   font-family: "Open Sans", sans-serif;
 }
@@ -531,63 +349,77 @@ html {
   }
 }
 
-.similar-articles {
-  background-color: #f0f7ff;
-  padding: 60px 20px;
+.cta-section {
+  background-color: #ffffff;
+  padding: 80px 0 100px;
   text-align: center;
 }
 
-.cta-section {
-  text-align: center;
+.cta-container {
+  max-width: 1140px;
+  margin: 0 auto;
 }
 
 .cta-title {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #001a33;
-  margin-bottom: 50px;
+  font-size: 48px;
+  font-weight: 800;
+  color: #001a4d;
+  margin-bottom: 40px;
+  letter-spacing: -1px;
 }
 
 .cta-buttons {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  gap: 25px;
 }
 
-.btn-dark {
-  background-color: #1a202c;
+.btn-help-center {
+  background-color: #111d2b;
   color: white;
   padding: 14px 28px;
   border-radius: 6px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 16px;
   display: inline-flex;
   align-items: center;
-  transition: 0.3s;
+  gap: 10px;
+  transition: background-color 0.2s;
 }
 
-.btn-dark:hover {
-  background-color: #000;
+.btn-help-center:hover {
+  background-color: #000000;
 }
 
-.link-blue {
+.cta-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.link-contact {
   color: #0056b3;
-  text-decoration: none;
-  font-weight: 600;
+  text-decoration: underline;
+  font-weight: 700;
+  font-size: 16px;
   display: inline-flex;
   align-items: center;
+  gap: 4px;
 }
 
-.link-blue:hover {
-  text-decoration: underline;
+.cta-link-icon {
+  width: 20px;
+  height: 20px;
 }
 
 @media (max-width: 640px) {
+  .cta-title {
+    font-size: 32px;
+  }
   .cta-buttons {
     flex-direction: column;
-    gap: 16px;
+    gap: 20px;
   }
 }
 </style>

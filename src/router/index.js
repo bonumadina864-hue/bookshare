@@ -17,6 +17,9 @@ import WhoWeArePage from "../pages/WhoWeArePage.vue";
 import EventsPage from "../pages/EventsPage.vue";
 import MediaKitPage from "../pages/MediaKitPage.vue";
 import DonatePage from "../pages/DonatePage.vue";
+import PartnerWithUsPage from "../pages/PartnerWithUsPage.vue";
+import ContactUsPage from "../pages/ContactUsPage.vue";
+import SiteMapPage from "../pages/SiteMapPage.vue";
 
 const routes = [
   { path: "/", name: "home", component: HomePage },
@@ -37,6 +40,9 @@ const routes = [
   { path: "/events", name: "events", component: EventsPage },
   { path: "/media-kit", name: "media-kit", component: MediaKitPage },
   { path: "/donate", name: "donate", component: DonatePage },
+  { path: "/partner-with-us", name: "partner-with-us", component: PartnerWithUsPage },
+  { path: "/contact-us", name: "contact-us", component: ContactUsPage },
+  { path: "/site-map", name: "site-map", component: SiteMapPage },
 ];
 
 export default createRouter({
